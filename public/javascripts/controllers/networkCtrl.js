@@ -29,7 +29,7 @@
                 });
                 //show only items which have network addresses
                 $scope.networks = data.assets.filter(function(d){
-                    return d.hasOwnProperty("networkAddress");
+                    return d.hasOwnProperty("networkAddress") && d.networkAddress != "";
                 });
             
             });
