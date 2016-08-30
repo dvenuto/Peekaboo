@@ -18,13 +18,13 @@ block content
                         th Cloud Provider
                     th
                     th
-                        input.form-control(type='text', placeholder='Network Name', ng-model='data.networkName')
+                        input.form-control(type='text', placeholder='Network Name', ng-model='data.name')
                     th
-                        input.form-control(type='text', placeholder='IP Address', ng-model='data.ipAddress')
+                        input.form-control(type='text', placeholder='IP Address', ng-model='data.NetworkAddress')
                     th
-                        input.form-control(type='text', placeholder='Subnet', ng-model='data.subnet')
+                        input.form-control(type='text', placeholder='Subnet', ng-model='data.networkMask')
                     th
-                        input.form-control(type='text', placeholder='Gateway', ng-model='data.gateway')
+                        input.form-control(type='text', placeholder='Gateway', ng-model='data.networkGateway')
                     th
                     th
                     th
@@ -32,12 +32,12 @@ block content
                 tbody(id="hor-zebra")
                     tr(ng-repeat='network in networks | filter: data as finalNetworks track by $index')
                         td {{finalNetworks.indexOf(network) + 1}}
-                        td {{network.networkName}}
-                        td {{network.ipAddress}}
-                        td {{network.subnet}}
-                        td {{network.gateway}}
+                        td {{network.name}}
+                        td {{network.networkAddress}}
+                        td {{network.networkMask}}
+                        td {{network.networkGateway}}
                         td {{network.noOfUsedIP}}
                         td {{network.remainingIP}}
-                        td {{network.cloud}}
+                        td {{network.assetlists[0].assets[0].name}}
 
 
