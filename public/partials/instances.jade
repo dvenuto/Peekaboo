@@ -25,7 +25,17 @@ block content
                     th
                         input.form-control(type='text', placeholder='OS', ng-model='data.OSType')
                     th
-                        input.form-control(type='text', placeholder='State', ng-model='data.state')
+                        select.form-control(type='text', placeholder='State', ng-model='data.state')
+                            option(value="") All
+                            option Unknown
+                            option Starting
+                            option Running
+                            option Paused
+                            option Stopping
+                            option Stopped
+                            option Destroyed
+                            option Failed
+                            option Degraded
                     th
                         input.form-control(type='text', placeholder='IP Address', ng-model='data.ipAddress')
                     th
